@@ -1,0 +1,45 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class ReleaseTokens {
+    public static void main(String[] args) throws Exception {
+        // Load environment variables
+        Dotenv dotenv = Dotenv.load();
+        AccountId operatorId = AccountId.fromString(dotenv.get("OPERATOR_ID"));
+        PrivateKey operatorKey = PrivateKey.fromString(dotenv.get("OPERATOR_KEY"));
+
+        // Setup Hedera client for testnet
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+
+        // Contract and token details
+        ContractId contractId = ContractId.fromString("0.0.6791530");   // contract
+        TokenId tokenId = TokenId.fromString("0.0.6460709");            // token
+        long amount = 100;                                              // tokens to release
+
+        // Recipient account
+        AccountId recipientId = AccountId.fromString("0.0.6207371");    // 👈 change to whoever should receive
+        String recipientSolidityAddr = recipientId;
+
+        // Build the transaction to call releaseTokens(token, recipient, amount)
+        ContractExecuteTransaction releaseTx = new ContractExecuteTransaction()
+            .setContractId(contractId)
+            .setGas(2_000_000) // adjust if needed
+            .setFunction(
+                "releaseTokens",
+                new ContractFunctionParameters()
+                    .addAddress(tokenId.toSolidityAddress())   // token
+                    .addAddress(recipientSolidityAddr)         // recipient (dynamic!)
+                    .addUint64(amount)                         // amount
+            );
+
+        // Submit transaction
+        TransactionResponse txResponse = releaseTx.execute(client);
+        TransactionReceipt receipt = txResponse.getReceipt(client);
+
+        // Print the final result
+        System.out.println("Release transaction status: " + receipt.status);
+    }
+}

@@ -1,0 +1,33 @@
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+import java.util.Collections;
+import java.util.concurrent.TimeoutException;
+
+public class TokenAssociation {
+    public static void main(String[] args) throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
+
+        // Load environment variables
+        Dotenv dotenv = Dotenv.load();
+        AccountId operatorId = AccountId.fromString(dotenv.get("OPERATOR_ID"));
+        PrivateKey operatorKey = PrivateKey.fromString(dotenv.get("OPERATOR_KEY"));
+
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+
+        // Token ID of the token you created
+        TokenId tokenId = TokenId.fromString("0.0.xxxxxx");
+
+        // Account you want to associate (here operator itself)
+        AccountId accountId = operatorId;
+
+        TransactionResponse transaction = new TokenAssociateTransaction()
+            .setAccountId(accountId)
+            .setTokenIds(Collections.singletonList(tokenId))  // ✅ wrap in a list
+            .freezeWith(client)
+            .sign(operatorKey)
+            .execute(client);
+
+        TransactionReceipt receipt = transaction.getReceipt(client);
+        System.out.println("Token association status: " + receipt.status);
+    }
+}

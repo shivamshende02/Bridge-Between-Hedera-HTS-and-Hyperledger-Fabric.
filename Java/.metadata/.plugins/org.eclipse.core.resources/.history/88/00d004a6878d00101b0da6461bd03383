@@ -1,0 +1,23 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+
+public class AccountInfoExample {
+
+    public static void main(String[] args) throws Exception {
+
+        // Your Hedera client setup code goes here (not shown for brevity)
+        // Client client = ...
+
+        String accountIdString = "0.0.6438872";
+        AccountId accountId = AccountId.fromString(accountIdString);
+
+        AccountInfo info = new AccountInfoQuery()
+                .setAccountId(accountId)
+                .execute(client);
+
+        System.out.println("Mirror Address: " + accountId.toSolidityAddress());
+        System.out.println("Alias Key: " + info.aliasKey);
+        System.out.println("Ethereum Address: " + info.ethereumAddress);
+    }
+}

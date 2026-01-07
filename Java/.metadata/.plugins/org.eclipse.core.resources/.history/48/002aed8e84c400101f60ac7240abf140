@@ -1,0 +1,166 @@
+package com.shivam.hedera;
+
+import com.google.gson.*;
+import okhttp3.*;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.net.URLEncoder;
+import java.time.Instant;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.math.BigDecimal;
+
+public class HederaListener {
+
+    // === Mirror Node / Contract Setup ===
+    private static final String MIRROR_API = "https://testnet.mirrornode.hedera.com/api/v1";
+    private static final String CONTRACT_ID = "0.0.7278925"; // <-- your deployed contract
+    private static final String EVENT_TOPIC_HASH = "0xbbbf805ef99ca7d0b7d2cc769719f2a281c9b3331a3642efa75a712e3094a166"; // TokensLocked topic
+    private static final String HLF_BRIDGE_URL = "http://localhost:8080/api/v1/mint"; // Bridge API
+
+    private static final OkHttpClient httpClient = new OkHttpClient.Builder()
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build();
+
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static Instant lastTimestamp = Instant.now().minusSeconds(120); // catch new logs at start
+    private static final Set<String> processedTxHashes = new HashSet<>();
+
+    public static void main(String[] args) {
+    	System.out.println("Listener started");
+        System.out.println("🚀 Starting Hedera Mirror Node Listener for contract: " + CONTRACT_ID);
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    pollMirrorNode();
+                } catch (Exception e) {
+                    System.err.println("❌ Error polling mirror node: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }, 0, 10_000); // Poll every 10 seconds
+    }
+
+    private static void pollMirrorNode() throws IOException {
+        String url = MIRROR_API + "/contracts/" + CONTRACT_ID + "/results/logs?order=desc&limit=10";
+        System.out.println("Polling Mirror Node at " + Instant.now());
+        Request request = new Request.Builder().url(url).get().build();
+        Response response = httpClient.newCall(request).execute();
+        if (!response.isSuccessful()) {
+            System.err.println("⚠️ Mirror Node request failed: " + response.code());
+            return;
+        }
+        String json = response.body().string();
+        JsonObject root = JsonParser.parseString(json).getAsJsonObject();
+        JsonArray logs = root.getAsJsonArray("logs");
+        if (logs == null || logs.size() == 0) {
+            System.out.println("⏳ No new events found.");
+            return;
+        }
+        for (JsonElement elem : logs) {
+            JsonObject log = elem.getAsJsonObject();
+            String timestamp = log.has("timestamp") ? log.get("timestamp").getAsString() : null;
+            Instant logTime = parseMirrorTimestamp(timestamp);
+            if (logTime.isBefore(lastTimestamp)) continue;
+
+            // topic0 always event selector
+            JsonArray topics = log.getAsJsonArray("topics");
+            if (topics == null || topics.size() == 0) continue;
+            String eventTopic = topics.get(0).getAsString();
+            if (!eventTopic.equalsIgnoreCase(EVENT_TOPIC_HASH)) continue;
+
+            processTokensLocked(log, topics);
+            lastTimestamp = logTime;
+        }
+    }
+
+    private static void processTokensLocked(JsonObject log, JsonArray topics) {
+        try {
+            // Get transaction hash for deduplication
+            String txHash = log.has("transaction_hash") ? log.get("transaction_hash").getAsString() : "UNKNOWN";
+            if (processedTxHashes.contains(txHash)) return;
+            processedTxHashes.add(txHash);
+
+            // Parse event indexed args
+            String tokenAddress  = topics.size() > 1 ? topics.get(1).getAsString() : null;
+            String senderAddress = topics.size() > 2 ? topics.get(2).getAsString() : null;
+
+            // Parse non-indexed args from ABI-encoded 'data' field
+            String data = log.has("data") ? log.get("data").getAsString().replace("0x", "") : "";
+            Long amount = null; Long eventTime = null;
+            if (data.length() >= 64) {
+                try {
+                    amount = new BigInteger(data.substring(0, 64), 16).longValue();
+                } catch (Exception e) {
+                    System.err.println("⚠️ Could not decode amount: " + e.getMessage());
+                }
+            }
+            if (data.length() >= 128) {
+                try {
+                    eventTime = new BigInteger(data.substring(64, 128), 16).longValue();
+                } catch (Exception e) {
+                    System.err.println("⚠️ Could not decode timestamp: " + e.getMessage());
+                }
+            }
+
+            // Read context fields
+            String blockNumber = log.has("block_number") ? log.get("block_number").getAsString() : "UNKNOWN";
+            String contractId = log.has("contract_id") ? log.get("contract_id").getAsString() : CONTRACT_ID;
+            String timestamp = log.has("timestamp") ? log.get("timestamp").getAsString() : null;
+            Instant mirrorTime = parseMirrorTimestamp(timestamp);
+
+            // Construct proof payload
+            JsonObject payload = new JsonObject();
+            payload.addProperty("event", "TokensLocked");
+            payload.addProperty("txHash", txHash);
+            payload.addProperty("blockNumber", blockNumber);
+            payload.addProperty("contractId", contractId);
+            payload.addProperty("tokenAddress", tokenAddress == null ? "N/A" : tokenAddress);
+            payload.addProperty("senderAddress", senderAddress == null ? "N/A" : senderAddress);
+            payload.addProperty("topicHash", EVENT_TOPIC_HASH);
+            payload.addProperty("mirrorNodeTimestamp", mirrorTime.toString());
+            if (amount != null)    payload.addProperty("amount", amount);
+            if (eventTime != null) payload.addProperty("eventTime", eventTime);
+
+            // Output
+            System.out.println("✅ Proof payload:\n" + gson.toJson(payload));
+
+            // POST to bridge endpoint
+            sendToHLFBridge(payload.toString());
+        } catch (Exception e) {
+            System.err.println("⚠️ Error processing TokensLocked event:");
+            System.err.println(log);
+            e.printStackTrace();
+        }
+    }
+
+    private static void sendToHLFBridge(String json) throws IOException {
+        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
+        Request request = new Request.Builder().url(HLF_BRIDGE_URL).post(body).build();
+        try (Response response = httpClient.newCall(request).execute()) {
+            System.out.println("🌉 Sent to HLF Bridge → Response Code: " + response.code());
+        }
+    }
+
+    private static Instant parseMirrorTimestamp(String ts) {
+        if (ts == null) return Instant.EPOCH;
+        String s = ts.trim();
+        if (s.contains("T")) {
+            try { return Instant.parse(s); } catch (Exception e) {}
+        }
+        s = s.endsWith("Z") ? s.substring(0, s.length() - 1) : s;
+        try {
+            BigDecimal bd = new BigDecimal(s);
+            long seconds = bd.longValue();
+            BigDecimal frac = bd.subtract(new BigDecimal(seconds));
+            long nanos = frac.multiply(new BigDecimal(1_000_000_000)).longValue();
+            return Instant.ofEpochSecond(seconds, nanos);
+        } catch (Exception e) {
+            System.err.println("parseMirrorTimestamp failed: " + e.getMessage());
+            return Instant.EPOCH;
+        }
+    }
+}

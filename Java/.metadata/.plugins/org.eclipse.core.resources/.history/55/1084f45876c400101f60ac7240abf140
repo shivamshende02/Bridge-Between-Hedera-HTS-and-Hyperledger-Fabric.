@@ -1,0 +1,180 @@
+package com.shivam.hedera;
+
+import com.google.gson.*;
+import okhttp3.*;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.net.URLEncoder;
+import java.time.Instant;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.math.BigDecimal;
+
+public class HederaListener {
+
+    // === Mirror Node / Contract Setup ===
+    private static final String MIRROR_API = "https://testnet.mirrornode.hedera.com/api/v1";
+    private static final String CONTRACT_ID = "0.0.7168571";       // your deployed contract
+    private static final String EVENT_TOPIC_HASH = "0xbbbf805ef99ca7d0b7d2cc769719f2a281c9b3331a3642efa75a712e3094a166"; // TokensLocked event signature
+    private static final String HLF_BRIDGE_URL = "http://localhost:8080/api/v1/mint"; // HLF REST endpoint
+
+    private static final OkHttpClient httpClient = new OkHttpClient.Builder()
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build();
+
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static Instant lastTimestamp = Instant.now().minusSeconds(60);
+    private static final Set<String> processedTxIds = new HashSet<>();
+
+    public static void main(String[] args) {
+        System.out.println("🚀 Starting Hedera Mirror Node Listener for contract: " + CONTRACT_ID);
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    pollMirrorNode();
+                } catch (Exception e) {
+                    System.err.println("❌ Error polling mirror node: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }, 0, 10_000); // Poll every 10 seconds
+    }
+
+    private static void pollMirrorNode() throws IOException {
+        String url = MIRROR_API + "/contracts/" + CONTRACT_ID + "/results/logs?order=desc&limit=10";
+        Request request = new Request.Builder().url(url).get().build();
+        Response response = httpClient.newCall(request).execute();
+        if (!response.isSuccessful()) {
+            System.err.println("⚠️ Mirror Node request failed: " + response.code());
+            return;
+        }
+        String json = response.body().string();
+        System.out.println("Raw Mirror Node Response:\n" + json);
+
+        JsonObject root = JsonParser.parseString(json).getAsJsonObject();
+        JsonArray logs = root.getAsJsonArray("logs");
+        if (logs == null || logs.size() == 0) {
+            System.out.println("⏳ No new events found.");
+            return;
+        }
+        for (JsonElement elem : logs) {
+            JsonObject log = elem.getAsJsonObject();
+            String timestamp = log.get("timestamp").getAsString();
+            Instant logTime = parseMirrorTimestamp(timestamp);
+            if (logTime.isBefore(lastTimestamp)) continue;
+            JsonArray topics = log.getAsJsonArray("topics");
+            String eventTopic = topics.get(0).getAsString();
+            if (eventTopic.equalsIgnoreCase(EVENT_TOPIC_HASH)) {
+                processTokensLocked(log);
+                lastTimestamp = logTime;
+            }
+        }
+    }
+
+    private static void processTokensLocked(JsonObject log) {
+        try {
+            String txId = log.get("transaction_id").getAsString();
+            if (processedTxIds.contains(txId)) return;
+
+            JsonArray topics = log.getAsJsonArray("topics");
+            String tokenAddress = topics.get(1).getAsString();
+            String senderAddress = topics.get(2).getAsString();
+            String data = log.get("data").getAsString().replace("0x", "");
+            // Solidity: tokensLocked(address token, address sender, int64 amount, uint256 timestamp)
+
+            // Amount is first 32 bytes (encodePacked for EVM logs: 32-byte big endian)
+            String amountHex = data.substring(0, 64);
+            BigInteger amountBI = new BigInteger(amountHex, 16);
+            long amount = amountBI.longValue();
+
+            // Timestamp: next 32 bytes, optional
+            long eventTime = 0;
+            if (data.length() >= 128) {
+                String timeHex = data.substring(64, 128);
+                eventTime = new BigInteger(timeHex, 16).longValue();
+            }
+
+            boolean verified = verifyTransactionSuccess(txId);
+            if (!verified) {
+                System.err.println("❌ Skipping unverified tx: " + txId);
+                return;
+            }
+
+            JsonObject payload = new JsonObject();
+            payload.addProperty("event", "TokensLocked");
+            payload.addProperty("txId", txId);
+            payload.addProperty("contractId", CONTRACT_ID);
+            payload.addProperty("tokenAddress", tokenAddress);
+            payload.addProperty("senderAddress", senderAddress);
+            payload.addProperty("amount", amount);
+            payload.addProperty("timestamp", eventTime != 0 ? eventTime : Instant.now().getEpochSecond());
+            payload.addProperty("verified", true);
+            payload.addProperty("mirrorCheckedAt", Instant.now().toString());
+
+            System.out.println("✅ Verified TokensLocked event:\n" + gson.toJson(payload));
+            sendToHLFBridge(payload.toString());
+            processedTxIds.add(txId);
+
+        } catch (Exception e) {
+            System.err.println("⚠️ Error decoding TokensLocked event: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static boolean verifyTransactionSuccess(String txId) {
+        try {
+            String query = URLEncoder.encode(txId, "UTF-8");
+            String url = MIRROR_API + "/transactions?transactionId=" + query;
+            Request request = new Request.Builder().url(url).get().build();
+            Response response = httpClient.newCall(request).execute();
+            if (!response.isSuccessful()) {
+                System.err.println("Mirror tx query failed: " + response.code());
+                return false;
+            }
+            String json = response.body().string();
+            JsonObject root = JsonParser.parseString(json).getAsJsonObject();
+            if (!root.has("transactions")) return false;
+            JsonArray txs = root.getAsJsonArray("transactions");
+            if (txs.size() == 0) return false;
+            JsonObject tx = txs.get(0).getAsJsonObject();
+            String result = tx.get("result").getAsString();
+            boolean success = "SUCCESS".equalsIgnoreCase(result);
+            System.out.println(success ? "✅ Tx Verified: " + txId : "❌ Tx Not Successful: " + txId);
+            return success;
+        } catch (Exception e) {
+            System.err.println("⚠️ verifyTransactionSuccess error: " + e.getMessage());
+            return false;
+        }
+    }
+
+    private static void sendToHLFBridge(String json) throws IOException {
+        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
+        Request request = new Request.Builder().url(HLF_BRIDGE_URL).post(body).build();
+        Response response = httpClient.newCall(request).execute();
+        System.out.println("🌉 Sent to HLF Bridge → Response Code: " + response.code());
+        response.close();
+    }
+
+    // Mirror node timestamp parser (works with ISO8601 and epoch float/nano)
+    private static Instant parseMirrorTimestamp(String ts) {
+        if (ts == null) return Instant.EPOCH;
+        String s = ts.trim();
+        if (s.contains("T")) {
+            try { return Instant.parse(s); } catch (Exception e) {}
+        }
+        s = s.endsWith("Z") ? s.substring(0, s.length() - 1) : s;
+        try {
+            BigDecimal bd = new BigDecimal(s);
+            long seconds = bd.longValue();
+            BigDecimal frac = bd.subtract(new BigDecimal(seconds));
+            long nanos = frac.multiply(new BigDecimal(1_000_000_000)).longValue();
+            return Instant.ofEpochSecond(seconds, nanos);
+        } catch (Exception e) {
+            System.err.println("parseMirrorTimestamp: failed to parse '" + ts + "' -> " + e.getMessage());
+            return Instant.EPOCH;
+        }
+    }
+}

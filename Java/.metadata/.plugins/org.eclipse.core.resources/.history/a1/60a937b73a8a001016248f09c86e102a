@@ -1,0 +1,35 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import java.util.Arrays;
+
+public class TransferToContract {
+    public static void main(String[] args) throws Exception {
+        Client client = Client.forTestnet();
+
+        // Load operator (your account, the sender)
+        client.setOperator(
+            AccountId.fromString(System.getenv("MY_ACCOUNT_ID")),
+            PrivateKey.fromString(System.getenv("MY_PRIVATE_KEY"))
+        );
+
+        // Token ID (fungible token you want to send)
+        TokenId tokenId = TokenId.fromString("0.0.6207371");
+
+        // Smart contract account ID (converted from your deployed contract’s EVM address)
+        String contractEvmAddress = "0xabc123...789"; // your contract address
+        AccountId contractAccountId = AccountId.fromEvmAddress(0, 0, contractEvmAddress);
+
+        // Transfer 10 tokens from your account → contract
+        TransferTransaction tx = new TransferTransaction()
+            .addTokenTransfer(tokenId, client.getOperatorAccountId(), -10) // deduct from you
+            .addTokenTransfer(tokenId, contractAccountId, 10)              // add to contract
+            .freezeWith(client)
+            .sign(client.getOperatorPrivateKey());
+
+        TransactionResponse response = tx.execute(client);
+        TransactionReceipt receipt = response.getReceipt(client);
+
+        System.out.println("✅ Token transfer status: " + receipt.status);
+    }
+}
