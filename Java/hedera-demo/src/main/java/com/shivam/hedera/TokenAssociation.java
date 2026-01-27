@@ -16,7 +16,7 @@ public class TokenAssociation{
         client.setOperator(operatorId, operatorKey);
 
         // Contract and token IDs
-        ContractId contractId = ContractId.fromString("0.0.7278925");   // Your deployed contract
+        ContractId contractId = ContractId.fromString("0.0.7751415");   // Your deployed contract
         TokenId tokenId = TokenId.fromString("0.0.6460709");            // The token to associate
 
         // Call the associateNewToken function in the contract

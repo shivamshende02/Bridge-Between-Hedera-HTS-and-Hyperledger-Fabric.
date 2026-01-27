@@ -1016,3 +1016,792 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.hedera.ha
 2026-01-08 00:52:41,472 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2026-01-08 00:52:48,554 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2026-01-08 00:52:48,558 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-21 11:42:53,806 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-22 12:42:43,649 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-23 11:04:06,181 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2026-01-23 12:08:39,529 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:08:39,534 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 12:09:00,554 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2026-01-23 12:09:57,943 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [643])
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2026-01-23 12:09:57,945 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2026-01-23 12:09:57,946 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [16])
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava_33.3.0.jre.jar
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\slf4j.api_2.0.16.jar
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2026-01-23 12:09:57,948 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2026-01-23 12:09:57,949 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2026-01-23 12:09:57,949 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2026-01-23 12:09:57,949 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2026-01-23 12:09:57,949 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2026-01-23 12:09:57,949 [Worker-47: Launching hedera-demo (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2026-01-23 12:09:57,950 [Worker-47: Launching hedera-demo (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\study\protocol\Java\hedera-demo":
+2026-01-23 12:09:57,965 [Worker-47: Launching hedera-demo (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always compile
+2026-01-23 12:10:58,661 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:10:58,663 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 12:12:42,376 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:12:42,378 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 12:12:52,417 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2026-01-23 12:12:58,303 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [643])
+2026-01-23 12:12:58,303 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2026-01-23 12:12:58,303 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2026-01-23 12:12:58,304 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [16])
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava_33.3.0.jre.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\slf4j.api_2.0.16.jar
+2026-01-23 12:12:58,305 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2026-01-23 12:12:58,306 [Worker-51: Launching hedera-demo (4)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2026-01-23 12:12:58,307 [Worker-51: Launching hedera-demo (4)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\study\protocol\Java\hedera-demo":
+2026-01-23 12:12:58,307 [Worker-51: Launching hedera-demo (4)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always compile
+2026-01-23 12:13:33,961 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:13:33,963 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 12:29:04,512 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [643])
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2026-01-23 12:29:09,632 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2026-01-23 12:29:09,633 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2026-01-23 12:29:09,634 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [16])
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava_33.3.0.jre.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\slf4j.api_2.0.16.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2026-01-23 12:29:09,635 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2026-01-23 12:29:09,636 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2026-01-23 12:29:09,636 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2026-01-23 12:29:09,636 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2026-01-23 12:29:09,636 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2026-01-23 12:29:09,636 [Worker-54: Launching hedera-demo (5)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2026-01-23 12:29:09,638 [Worker-54: Launching hedera-demo (5)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\study\protocol\Java\hedera-demo":
+2026-01-23 12:29:09,638 [Worker-54: Launching hedera-demo (5)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always compile
+2026-01-23 12:30:09,184 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:30:09,185 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 12:30:44,420 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 12:30:44,422 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:07:44,789 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:07:44,791 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:10:51,343 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2026-01-23 13:10:56,137 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [643])
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2026-01-23 13:10:56,138 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2026-01-23 13:10:56,139 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [16])
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava_33.3.0.jre.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\slf4j.api_2.0.16.jar
+2026-01-23 13:10:56,140 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2026-01-23 13:10:56,141 [Worker-72: Launching hedera-demo (6)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2026-01-23 13:10:56,142 [Worker-72: Launching hedera-demo (6)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\study\protocol\Java\hedera-demo":
+2026-01-23 13:10:56,142 [Worker-72: Launching hedera-demo (6)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always compile
+2026-01-23 13:12:07,068 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:12:07,071 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:12:18,751 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:12:18,753 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:25:10,712 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:25:10,716 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:25:35,305 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:25:35,307 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:25:42,367 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:25:42,369 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:25:57,691 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:25:57,693 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:26:25,646 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:26:25,647 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:28:37,990 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:28:37,992 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:29:15,194 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:29:15,196 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:32:16,693 [Worker-78: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.shivam.hedera:hedera-demo:0.0.1-SNAPSHOT @ D:\study\protocol\Java\hedera-demo\pom.xml.
+2026-01-23 13:32:17,279 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:32:17,282 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:32:56,780 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:32:56,782 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:37:45,622 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:37:45,623 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:37:53,620 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:37:53,622 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:38:42,844 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:38:42,847 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:39:58,172 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:39:58,174 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:50:59,058 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:50:59,060 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:51:26,149 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:51:26,150 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 13:51:52,006 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 13:51:52,008 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:28:44,483 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:28:44,483 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:28:48,485 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:28:48,487 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:30:21,421 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:30:21,423 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:32:26,798 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:32:26,799 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:32:53,581 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:32:53,582 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:34:52,295 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:34:52,296 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:35:49,589 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2026-01-23 15:35:54,549 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [643])
+2026-01-23 15:35:54,549 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2026-01-23 15:35:54,550 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2026-01-23 15:35:54,551 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [16])
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava_33.3.0.jre.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\slf4j.api_2.0.16.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2026-01-23 15:35:54,552 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2026-01-23 15:35:54,553 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2026-01-23 15:35:54,553 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2026-01-23 15:35:54,553 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2026-01-23 15:35:54,553 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2026-01-23 15:35:54,553 [Worker-105: Launching hedera-demo (7)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: D:\study\JAVA\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2026-01-23 15:35:54,554 [Worker-105: Launching hedera-demo (7)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\study\protocol\Java\hedera-demo":
+2026-01-23 15:35:54,555 [Worker-105: Launching hedera-demo (7)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always compile
+2026-01-23 15:40:42,951 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:40:42,953 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:42:39,608 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:42:39,609 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:45:55,143 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:45:55,145 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:46:02,235 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:46:02,236 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:47:58,191 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:47:58,193 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:49:28,955 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:49:28,956 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:49:44,481 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:49:44,482 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:50:11,197 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:50:11,199 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 15:57:26,820 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 15:57:26,822 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 16:00:17,122 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 16:00:17,123 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 16:33:54,956 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 16:33:54,958 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 16:35:05,880 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 16:35:05,881 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 16:35:19,028 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 16:35:19,030 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 16:38:01,278 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 16:38:01,280 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:47:10,640 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:47:10,643 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:48:15,189 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:48:15,191 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:48:27,956 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:48:27,958 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:49:37,213 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:49:37,214 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:50:50,907 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:50:50,908 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:50:59,565 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:50:59,566 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 17:59:14,778 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-23 17:59:39,506 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 17:59:39,512 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 18:00:41,855 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 18:00:41,858 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-23 18:11:16,629 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2026-01-23 20:35:56,983 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-23 20:35:56,991 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-24 15:24:22,781 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2026-01-24 23:41:57,016 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-24 23:42:53,167 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-24 23:42:53,175 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-24 23:59:03,798 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-24 23:59:03,801 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-24 23:59:14,756 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-24 23:59:14,758 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:03:03,404 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:03:03,407 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:04:13,330 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:04:13,332 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:13:09,976 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:13:09,978 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:13:30,762 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:13:30,764 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:18:55,533 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:18:55,535 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:19:03,114 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:19:03,116 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:31:24,788 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:31:24,790 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:36:05,934 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:36:05,937 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:36:47,525 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:36:47,527 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-25 00:37:10,106 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-25 00:37:10,108 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:13:23,552 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-26 15:25:01,353 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:25:01,362 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:25:18,505 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:25:18,509 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:25:40,710 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:25:40,712 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:26:12,137 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:26:12,140 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:27:22,889 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:27:22,892 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:27:43,121 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:27:43,123 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:28:20,631 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:28:20,633 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:43:07,082 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:43:07,085 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:43:35,294 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:43:35,301 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:43:44,316 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:43:44,317 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:44:13,219 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:44:13,221 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 15:45:15,346 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 15:45:15,348 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 17:27:14,923 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 17:27:14,926 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 17:28:08,854 [Worker-59: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.shivam.hedera:hedera-demo:0.0.1-SNAPSHOT @ D:\study\protocol\Java\hedera-demo\pom.xml.
+2026-01-26 17:28:09,314 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0.pom
+2026-01-26 17:28:09,640 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0.pom
+2026-01-26 17:28:09,869 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0.pom
+2026-01-26 17:28:09,891 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0.pom
+2026-01-26 17:28:10,118 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3.pom
+2026-01-26 17:28:10,150 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3.pom
+2026-01-26 17:28:10,185 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3.pom
+2026-01-26 17:28:10,220 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3.pom
+2026-01-26 17:28:10,259 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3.pom
+2026-01-26 17:28:10,287 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3.pom
+2026-01-26 17:28:10,357 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.73/bcprov-jdk18on-1.73.pom
+2026-01-26 17:28:10,374 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.73/bcprov-jdk18on-1.73.pom
+2026-01-26 17:28:10,403 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3.pom
+2026-01-26 17:28:10,430 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3.pom
+2026-01-26 17:28:10,480 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3.pom
+2026-01-26 17:28:10,504 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3.pom
+2026-01-26 17:28:10,553 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.pom
+2026-01-26 17:28:10,608 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.pom
+2026-01-26 17:28:10,647 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.14.2/jackson-base-2.14.2.pom
+2026-01-26 17:28:10,674 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.14.2/jackson-base-2.14.2.pom
+2026-01-26 17:28:10,709 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.14.2/jackson-bom-2.14.2.pom
+2026-01-26 17:28:10,735 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.14.2/jackson-bom-2.14.2.pom
+2026-01-26 17:28:10,774 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom
+2026-01-26 17:28:10,806 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom
+2026-01-26 17:28:10,836 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom
+2026-01-26 17:28:10,868 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom
+2026-01-26 17:28:10,908 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.pom
+2026-01-26 17:28:10,936 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.pom
+2026-01-26 17:28:10,961 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.pom
+2026-01-26 17:28:10,991 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.pom
+2026-01-26 17:28:11,020 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3.pom
+2026-01-26 17:28:11,055 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3.pom
+2026-01-26 17:28:11,089 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.pom
+2026-01-26 17:28:11,117 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.pom
+2026-01-26 17:28:11,158 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.pom
+2026-01-26 17:28:11,185 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.pom
+2026-01-26 17:28:11,224 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9.pom
+2026-01-26 17:28:11,249 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9.pom
+2026-01-26 17:28:11,285 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.pom
+2026-01-26 17:28:11,308 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.pom
+2026-01-26 17:28:11,339 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5/ow2-1.5.pom
+2026-01-26 17:28:11,365 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5/ow2-1.5.pom
+2026-01-26 17:28:11,399 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom
+2026-01-26 17:28:11,423 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom
+2026-01-26 17:28:11,449 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.pom
+2026-01-26 17:28:11,473 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.pom
+2026-01-26 17:28:11,500 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.pom
+2026-01-26 17:28:11,516 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.pom
+2026-01-26 17:28:11,539 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom
+2026-01-26 17:28:11,562 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom
+2026-01-26 17:28:11,590 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.pom
+2026-01-26 17:28:11,612 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.pom
+2026-01-26 17:28:11,638 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.pom
+2026-01-26 17:28:11,659 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.pom
+2026-01-26 17:28:11,687 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.pom
+2026-01-26 17:28:11,709 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.pom
+2026-01-26 17:28:11,736 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.pom
+2026-01-26 17:28:11,758 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.pom
+2026-01-26 17:28:11,784 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.pom
+2026-01-26 17:28:11,806 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.pom
+2026-01-26 17:28:11,835 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.0/okhttp-4.9.0.pom
+2026-01-26 17:28:11,850 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.0/okhttp-4.9.0.pom
+2026-01-26 17:28:11,880 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio/2.8.0/okio-2.8.0.pom
+2026-01-26 17:28:11,902 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/squareup/okio/okio/2.8.0/okio-2.8.0.pom
+2026-01-26 17:28:11,956 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom
+2026-01-26 17:28:11,970 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom
+2026-01-26 17:28:11,997 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom
+2026-01-26 17:28:12,020 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom
+2026-01-26 17:28:12,045 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0.pom
+2026-01-26 17:28:12,060 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0.pom
+2026-01-26 17:28:12,083 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.10/kotlin-stdlib-jdk8-1.4.10.pom
+2026-01-26 17:28:12,105 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.10/kotlin-stdlib-jdk8-1.4.10.pom
+2026-01-26 17:28:12,129 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.10/kotlin-stdlib-jdk7-1.4.10.pom
+2026-01-26 17:28:12,151 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.10/kotlin-stdlib-jdk7-1.4.10.pom
+2026-01-26 17:28:12,186 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.pom
+2026-01-26 17:28:12,202 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.pom
+2026-01-26 17:28:12,225 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.pom
+2026-01-26 17:28:12,241 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.pom
+2026-01-26 17:28:12,268 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.pom
+2026-01-26 17:28:12,291 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.pom
+2026-01-26 17:28:12,329 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.pom
+2026-01-26 17:28:12,343 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.pom
+2026-01-26 17:28:12,747 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0.jar
+2026-01-26 17:28:13,318 [Worker-59: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0.jar
+2026-01-26 17:28:13,365 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0.jar
+2026-01-26 17:28:13,379 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3.jar
+2026-01-26 17:28:13,392 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3.jar
+2026-01-26 17:28:13,400 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3.jar
+2026-01-26 17:28:13,413 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0.jar
+2026-01-26 17:28:13,437 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3.jar
+2026-01-26 17:28:13,458 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3.jar
+2026-01-26 17:28:13,478 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3.jar
+2026-01-26 17:28:13,507 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3.jar
+2026-01-26 17:28:13,524 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3.jar
+2026-01-26 17:28:13,538 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3.jar
+2026-01-26 17:28:13,539 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3.jar
+2026-01-26 17:28:13,551 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.jar
+2026-01-26 17:28:13,570 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.jar
+2026-01-26 17:28:13,600 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9.jar
+2026-01-26 17:28:13,645 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3.jar
+2026-01-26 17:28:13,727 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9-native.jar
+2026-01-26 17:28:13,733 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9.jar
+2026-01-26 17:28:13,862 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3.jar
+2026-01-26 17:28:13,900 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.jar
+2026-01-26 17:28:13,919 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.jar
+2026-01-26 17:28:13,934 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.jar
+2026-01-26 17:28:13,937 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.jar
+2026-01-26 17:28:13,957 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.jar
+2026-01-26 17:28:13,982 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.jar
+2026-01-26 17:28:13,993 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.jar
+2026-01-26 17:28:14,026 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.jar
+2026-01-26 17:28:14,036 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.jar
+2026-01-26 17:28:14,038 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.jar
+2026-01-26 17:28:14,065 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9-native.jar
+2026-01-26 17:28:14,065 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar
+2026-01-26 17:28:14,072 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.jar
+2026-01-26 17:28:14,093 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar
+2026-01-26 17:28:14,107 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar
+2026-01-26 17:28:14,115 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.jar
+2026-01-26 17:28:14,116 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.jar
+2026-01-26 17:28:14,133 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar
+2026-01-26 17:28:14,145 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.jar
+2026-01-26 17:28:14,205 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0.jar
+2026-01-26 17:28:14,218 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.jar
+2026-01-26 17:28:14,260 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.jar
+2026-01-26 17:28:14,260 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.jar
+2026-01-26 17:28:14,313 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar
+2026-01-26 17:28:14,334 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar
+2026-01-26 17:28:14,389 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0.jar
+2026-01-26 17:28:14,404 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar
+2026-01-26 17:28:14,441 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar
+2026-01-26 17:28:14,470 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar
+2026-01-26 17:28:14,516 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.jar
+2026-01-26 17:28:14,641 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar
+2026-01-26 17:28:14,697 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar
+2026-01-26 17:28:14,789 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar
+2026-01-26 17:28:14,906 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.jar
+2026-01-26 17:28:14,953 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.jar
+2026-01-26 17:28:15,045 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar
+2026-01-26 17:28:15,059 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar
+2026-01-26 17:28:15,059 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.jar
+2026-01-26 17:28:15,579 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.jar
+2026-01-26 17:28:16,259 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 17:28:16,262 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 17:28:17,394 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0-sources.jar
+2026-01-26 17:28:17,781 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/hedera/hashgraph/sdk/2.40.0/sdk-2.40.0-sources.jar
+2026-01-26 17:28:17,792 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.hedera.hashgraph:sdk:2.40.0
+2026-01-26 17:28:18,479 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0-sources.jar
+2026-01-26 17:28:18,545 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/esaulpaugh/headlong/12.1.0/headlong-12.1.0-sources.jar
+2026-01-26 17:28:18,553 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.esaulpaugh:headlong:12.1.0
+2026-01-26 17:28:18,611 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3-sources.jar
+2026-01-26 17:28:18,679 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/core/4.10.3/core-4.10.3-sources.jar
+2026-01-26 17:28:18,683 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:core:4.10.3
+2026-01-26 17:28:18,749 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3-sources.jar
+2026-01-26 17:28:18,796 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/abi/4.10.3/abi-4.10.3-sources.jar
+2026-01-26 17:28:18,800 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:abi:4.10.3
+2026-01-26 17:28:18,877 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3-sources.jar
+2026-01-26 17:28:19,150 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/utils/4.10.3/utils-4.10.3-sources.jar
+2026-01-26 17:28:19,159 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:utils:4.10.3
+2026-01-26 17:28:19,320 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 17:28:19,323 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 17:28:19,353 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3-sources.jar
+2026-01-26 17:28:19,391 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/crypto/4.10.3/crypto-4.10.3-sources.jar
+2026-01-26 17:28:19,395 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:crypto:4.10.3
+2026-01-26 17:28:19,515 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3-sources.jar
+2026-01-26 17:28:19,591 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/rlp/4.10.3/rlp-4.10.3-sources.jar
+2026-01-26 17:28:19,594 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:rlp:4.10.3
+2026-01-26 17:28:19,750 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3-sources.jar
+2026-01-26 17:28:20,050 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/web3j/tuples/4.10.3/tuples-4.10.3-sources.jar
+2026-01-26 17:28:20,053 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.web3j:tuples:4.10.3
+2026-01-26 17:28:20,301 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17-sources.jar
+2026-01-26 17:28:20,652 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17-sources.jar
+2026-01-26 17:28:20,656 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-unixsocket:0.38.17
+2026-01-26 17:28:20,715 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11-sources.jar
+2026-01-26 17:28:20,980 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11-sources.jar
+2026-01-26 17:28:20,983 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-ffi:2.2.11
+2026-01-26 17:28:21,104 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9-sources.jar
+2026-01-26 17:28:21,177 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jffi/1.3.9/jffi-1.3.9-sources.jar
+2026-01-26 17:28:21,181 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jffi:1.3.9
+2026-01-26 17:28:21,196 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jffi:1.3.9native
+2026-01-26 17:28:21,424 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2-sources.jar
+2026-01-26 17:28:21,625 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2-sources.jar
+2026-01-26 17:28:21,629 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm:9.2
+2026-01-26 17:28:21,843 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2-sources.jar
+2026-01-26 17:28:21,908 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2-sources.jar
+2026-01-26 17:28:21,913 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm-commons:9.2
+2026-01-26 17:28:22,123 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2-sources.jar
+2026-01-26 17:28:22,430 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2-sources.jar
+2026-01-26 17:28:22,444 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm-analysis:9.2
+2026-01-26 17:28:22,526 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2-sources.jar
+2026-01-26 17:28:22,787 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.2/asm-tree-9.2-sources.jar
+2026-01-26 17:28:22,791 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm-tree:9.2
+2026-01-26 17:28:22,839 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2-sources.jar
+2026-01-26 17:28:22,939 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2-sources.jar
+2026-01-26 17:28:22,942 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm-util:9.2
+2026-01-26 17:28:23,164 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0-sources.jar
+2026-01-26 17:28:23,195 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0-sources.jar
+2026-01-26 17:28:23,198 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-a64asm:1.0.0
+2026-01-26 17:28:23,249 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2-sources.jar
+2026-01-26 17:28:23,320 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2-sources.jar
+2026-01-26 17:28:23,324 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-x86asm:1.0.2
+2026-01-26 17:28:23,394 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3-sources.jar
+2026-01-26 17:28:23,578 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3-sources.jar
+2026-01-26 17:28:23,582 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-constants:0.10.3
+2026-01-26 17:28:23,633 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13-sources.jar
+2026-01-26 17:28:23,863 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13-sources.jar
+2026-01-26 17:28:23,866 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-enxio:0.32.13
+2026-01-26 17:28:23,938 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15-sources.jar
+2026-01-26 17:28:24,047 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15-sources.jar
+2026-01-26 17:28:24,050 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.github.jnr:jnr-posix:3.1.15
+2026-01-26 17:28:24,171 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0-sources.jar
+2026-01-26 17:28:24,218 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.9.0/logging-interceptor-4.9.0-sources.jar
+2026-01-26 17:28:24,221 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.squareup.okhttp3:logging-interceptor:4.9.0
+2026-01-26 17:28:24,410 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2-sources.jar
+2026-01-26 17:28:24,758 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2-sources.jar
+2026-01-26 17:28:24,761 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.reactivex.rxjava2:rxjava:2.2.2
+2026-01-26 17:28:24,836 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar
+2026-01-26 17:28:24,885 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar
+2026-01-26 17:28:24,889 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.reactivestreams:reactive-streams:1.0.2
+2026-01-26 17:28:25,078 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3-sources.jar
+2026-01-26 17:28:25,164 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3-sources.jar
+2026-01-26 17:28:25,167 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.java-websocket:Java-WebSocket:1.5.3
+2026-01-26 17:28:25,252 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2-sources.jar
+2026-01-26 17:28:25,620 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2-sources.jar
+2026-01-26 17:28:25,623 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-databind:2.14.2
+2026-01-26 17:28:25,669 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2-sources.jar
+2026-01-26 17:28:25,705 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2-sources.jar
+2026-01-26 17:28:25,709 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-annotations:2.14.2
+2026-01-26 17:28:25,757 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2-sources.jar
+2026-01-26 17:28:25,869 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2-sources.jar
+2026-01-26 17:28:25,872 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-core:2.14.2
+2026-01-26 17:28:26,027 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2-sources.jar
+2026-01-26 17:28:26,291 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2-sources.jar
+2026-01-26 17:28:26,293 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.github.adraffy:ens-normalize:0.1.2
+2026-01-26 17:44:42,398 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 17:44:42,401 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 19:30:25,817 [Worker-87: Launching HederaListener] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 19:30:25,883 [Worker-87: Launching HederaListener] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 19:54:36,086 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 19:54:36,088 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 19:55:43,487 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 19:55:43,490 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 20:06:19,809 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2026-01-26 20:08:31,041 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 20:08:31,046 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 20:11:05,087 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 20:11:05,090 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 20:14:42,712 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 20:14:42,715 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:21:27,734 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:21:27,740 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:30:26,554 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:30:26,557 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:30:32,160 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:30:32,162 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:34:53,231 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:34:53,235 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:38:34,370 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:38:34,371 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 22:49:09,115 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 22:49:09,117 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:00:51,062 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:00:51,065 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:01:12,701 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:01:12,703 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:50:09,589 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:50:09,592 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:50:28,338 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:50:28,339 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:51:05,542 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:51:05,546 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:51:13,188 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:51:13,190 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:51:46,521 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:51:46,522 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:52:28,002 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:52:28,004 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:52:39,120 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:52:39,123 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:53:04,351 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:53:04,354 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-26 23:54:45,536 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-26 23:54:45,539 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:01:57,958 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:01:57,961 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:02:21,342 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:02:21,346 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:07:47,836 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:07:47,837 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:07:54,112 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:07:54,114 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:08:27,038 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:08:27,039 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:08:32,706 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:08:32,709 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:12:21,970 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:12:21,973 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:12:43,730 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:12:43,731 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:27:10,794 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:27:10,796 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:27:36,294 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:27:36,299 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:27:44,985 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:27:44,987 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:29:18,584 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:29:18,586 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2026-01-27 00:30:36,220 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-01-27 00:30:36,223 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes

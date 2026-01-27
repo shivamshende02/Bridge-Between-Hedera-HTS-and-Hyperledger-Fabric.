@@ -1,0 +1,56 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class TokenAssociation{
+    
+    public static void main(String[] args) throws Exception {
+        
+        // Load environment variables
+        Dotenv dotenv = Dotenv.load();
+        AccountId operatorId = AccountId.fromString(dotenv.get("OPERATOR_ID"));
+        PrivateKey operatorKey = PrivateKey.fromString(dotenv.get("OPERATOR_KEY"));
+        
+        // Create Hedera testnet client
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+        
+        // Your deployed contract ID
+        ContractId escrowContractId = ContractId.fromString("0.0.7747095");
+        
+        // Token ID to associate (can be any HTS token)
+        TokenId tokenToAssociate = TokenId.fromString("0.0.6460709");
+        
+        // Convert token ID to Solidity address format
+        String tokenAddressSolidity = tokenToAssociate.toSolidityAddress();
+        
+        // Call associateNewToken function
+        TransactionResponse response = new ContractExecuteTransaction()
+                .setContractId(escrowContractId)
+                .setGas(300000) // Sufficient gas for HTS precompile call
+                .setFunction("associateNewToken", 
+                    new ContractFunctionParameters()
+                        .addAddress(tokenAddressSolidity))
+                .execute(client);
+        
+        // Get receipt to confirm success
+        TransactionReceipt receipt = response.getReceipt(client);
+        System.out.println("Transaction status: " + receipt.status);
+        
+        // Get transaction record to see emitted events
+        TransactionRecord record = response.getRecord(client);
+        System.out.println("Contract call result: " + record.contractFunctionResult);
+        
+        // Parse events from logs
+        if (!record.contractFunctionResult.logs.isEmpty()) {
+            System.out.println("\nEmitted events:");
+            record.contractFunctionResult.logs.forEach(log -> {
+                System.out.println("Event topics: " + log.topics);
+                System.out.println("Event data: " + log.data);
+            });
+        }
+        
+        client.close();
+    }
+}

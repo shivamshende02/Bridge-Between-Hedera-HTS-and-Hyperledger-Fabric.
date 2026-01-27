@@ -1,0 +1,60 @@
+private static BridgePayload createBridgePayload(TokenLockEvent event) {
+    BridgePayload payload = new BridgePayload();
+    
+    // Contract info
+    payload.setContractId(contractId);
+    payload.setContractEvmAddress(contractEvmAddress);
+    
+    // Token info
+    payload.setTokenEvmAddress(event.token);
+    payload.setTokenId(evmAddressToTokenId(event.token));
+    
+    // Sender info - keep EVM address, don't convert if it's an alias
+    payload.setSenderEvmAddress(event.sender);
+    
+    // Try to convert to account ID, but if it fails, leave empty or use EVM address
+    String accountId = tryConvertToAccountId(event.sender);
+    payload.setSenderAccountId(accountId != null ? accountId : event.sender);
+    
+    // Amount
+    payload.setAmount(event.amount);
+    
+    // Timestamps
+    payload.setConsensusTimestamp(event.timestamp);
+    payload.setBlockTimestamp(String.valueOf(event.blockTimestamp));
+    
+    // Event signature
+    payload.setEventSignature(TOKENS_LOCKED_SIGNATURE);
+    
+    // Mirror Node verification URL
+    payload.setMirrorNodeEventUrl(
+        MIRROR_NODE_URL + "/contracts/" + contractEvmAddress + 
+        "/results/logs?timestamp=" + event.timestamp
+    );
+    
+    return payload;
+}
+
+// New helper method
+private static String tryConvertToAccountId(String evmAddress) {
+    if (evmAddress == null || evmAddress.isEmpty()) {
+        return null;
+    }
+    
+    String cleanAddress = evmAddress.startsWith("0x") ? evmAddress.substring(2) : evmAddress;
+    
+    // Check if it's a standard Hedera mirror address (starts with many zeros)
+    if (cleanAddress.startsWith("00000000000000000000")) {
+        // Standard mirror format - extract entity number
+        try {
+            String numHex = cleanAddress.substring(24, 40);
+            long accountNum = Long.parseUnsignedLong(numHex, 16);
+            return "0.0." + accountNum;
+        } catch (Exception e) {
+            return null;
+        }
+    } else {
+        // It's an alias address (ECDSA key) - keep as EVM address
+        return null;
+    }
+}

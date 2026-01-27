@@ -1,0 +1,41 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class DeployEscrowContract {
+
+    public static void main(String[] args) throws Exception {
+
+        Dotenv env = Dotenv.load();
+        AccountId operatorId = AccountId.fromString(env.get("OPERATOR_ID"));
+        PrivateKey operatorKey = PrivateKey.fromString(env.get("OPERATOR_KEY"));
+
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+
+        System.out.println("Deploying from Hedera Account: " + operatorId);
+        System.out.println("Mirror EVM address: 0x" + operatorId.toSolidityAddress());
+
+        // Bytecode copied from Remix
+        String bytecode = "<PUT YOUR CONTRACT BYTECODE HERE>";
+
+        // Create contract
+        ContractCreateTransaction tx = new ContractCreateTransaction()
+                .setBytecode(bytecode)
+                .setGas(3_000_000)
+                .setConstructorParameters(
+                        new ContractFunctionParameters()
+                                .addAddress("0x" + operatorId.toSolidityAddress()) // mirror owner
+                );
+
+        TransactionResponse response = tx.execute(client);
+        TransactionReceipt receipt = response.getReceipt(client);
+
+        ContractId contractId = receipt.contractId;
+
+        System.out.println("Contract deployed!");
+        System.out.println("Contract ID: " + contractId);
+        System.out.println("Contract EVM: 0x" + contractId.toSolidityAddress());
+    }
+}

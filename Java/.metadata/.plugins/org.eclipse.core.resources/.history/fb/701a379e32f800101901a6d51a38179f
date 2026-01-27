@@ -1,0 +1,101 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class ReleaseByAccountId {
+
+    // Parse "0.0.6438872" → {shard=0, realm=0, num=6438872}
+    private static long[] parseAccountId(String accountId) {
+        String trimmed = accountId.trim();
+        String[] parts = trimmed.split("\\.");
+        if (parts.length != 3) {
+            throw new IllegalArgumentException("AccountId must be shard.realm.num");
+        }
+        return new long[]{
+                Long.parseLong(parts[0]),
+                Long.parseLong(parts[1]),
+                Long.parseLong(parts[2])
+        };
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        // 1. Load operator (must be the OWNER of the contract)
+    	Dotenv env = Dotenv.load();
+
+    	String operatorIdStr = env.get("OPERATOR_ID");
+    	String operatorKeyStr = env.get("OPERATOR_KEY");
+
+    	AccountId operatorId = AccountId.fromString(operatorIdStr);
+    	PrivateKey operatorKey = PrivateKey.fromString(operatorKeyStr);
+
+    	System.out.println("Operator Hedera ID : " + operatorId);
+    	System.out.println("Operator EVM Addr  : " + operatorId.toEvmAddress().toString());
+
+        
+
+
+        if (operatorIdStr == null || operatorKeyStr == null) {
+            throw new RuntimeException(" .env file missing OPERATOR_ID or OPERATOR_KEY");
+        }
+
+        AccountId operatorId = AccountId.fromString(operatorIdStr);
+        PrivateKey operatorKey = PrivateKey.fromString(operatorKeyStr);
+
+        System.out.println("Operator Hedera ID  : " + operatorId);
+        System.out.println("Operator EVM Addr   : 0x" + operatorId.toSolidityAddress());
+
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+
+        // 2. Update these values
+        String contractIdStr = "0.0.7717493";   // Your escrow contract
+        String tokenIdStr    = "0.0.6460709";   // Token
+        String recipientStr  = "0.0.6438872";   // Receiver
+        long amount          = 1L;              // smallest unit (NOT 1 full token)
+
+        ContractId contractId = ContractId.fromString(contractIdStr);
+        TokenId tokenId = TokenId.fromString(tokenIdStr);
+
+        String tokenSolAddr = tokenId.toSolidityAddress();
+        long[] s_r_n = parseAccountId(recipientStr);
+
+        long shard = s_r_n[0];
+        long realm = s_r_n[1];
+        long num   = s_r_n[2];
+
+        System.out.println("--------------------------------------------------");
+        System.out.println("Contract ID        : " + contractId);
+        System.out.println("Token ID           : " + tokenId);
+        System.out.println("Recipient Account  : " + shard + "." + realm + "." + num);
+        System.out.println("Amount (atomic)    : " + amount);
+        System.out.println("--------------------------------------------------");
+
+        // 3. Execute releaseByAccountId()
+        ContractExecuteTransaction tx = new ContractExecuteTransaction()
+                .setContractId(contractId)
+                .setGas(2_000_000)
+                .setFunction(
+                        "releaseByAccountId",
+                        new ContractFunctionParameters()
+                                .addAddress(tokenSolAddr)
+                                .addUint32((int) shard)
+                                .addUint64(realm)
+                                .addUint64(num)
+                                .addInt64(amount)
+                );
+
+        TransactionResponse resp = tx.execute(client);
+        TransactionReceipt receipt = resp.getReceipt(client);
+
+        System.out.println(" Transaction ID : " + resp.transactionId);
+        System.out.println(" Status         : " + receipt.status);
+
+        if (receipt.status == Status.SUCCESS) {
+            System.out.println(" Tokens released successfully!");
+        } else {
+            System.out.println(" Release failed: " + receipt.status);
+        }
+    }
+}

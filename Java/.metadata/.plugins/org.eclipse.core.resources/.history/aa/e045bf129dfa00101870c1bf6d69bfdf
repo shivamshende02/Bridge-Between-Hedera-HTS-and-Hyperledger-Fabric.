@@ -1,0 +1,57 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+import java.util.concurrent.TimeoutException;
+
+public class TokenAssociation {
+    public static void main(String[] args) throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
+
+        Dotenv dotenv = Dotenv.load();
+        AccountId operatorId = AccountId.fromString(dotenv.get("OPERATOR_ID"));
+        PrivateKey operatorKey = PrivateKey.fromString(dotenv.get("OPERATOR_KEY"));
+
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+
+        ContractId contractId = ContractId.fromString("0.0.7728744");
+        TokenId tokenId = TokenId.fromString("0.0.6460709");
+
+        System.out.println("Associating token " + tokenId + " with contract " + contractId);
+
+        ContractExecuteTransaction tx = new ContractExecuteTransaction()
+            .setContractId(contractId)
+            .setGas(300_000)
+            .setFunction(
+                "associateNewToken",
+                new ContractFunctionParameters()
+                    .addAddress(tokenId.toSolidityAddress())
+            );
+
+        TransactionResponse resp = tx.execute(client);
+        
+        // Get receipt for status
+        TransactionReceipt receipt = resp.getReceipt(client);
+        System.out.println("✓ Status: " + receipt.status);
+
+        // Get record for detailed execution info
+        TransactionRecord record = resp.getRecord(client);
+        ContractFunctionResult result = record.contractFunctionResult;
+        
+        if (result != null) {
+            System.out.println("Gas used: " + result.gasUsed);
+            System.out.println("Contract ID: " + result.contractId);
+            
+            // Print event logs if any
+            if (!result.logs.isEmpty()) {
+                System.out.println("\nEvent logs:");
+                for (ContractLogInfo log : result.logs) {
+                    System.out.println("  Topic: " + log.topics);
+                    System.out.println("  Data: " + log.data);
+                }
+            }
+        }
+
+        client.close();
+    }
+}

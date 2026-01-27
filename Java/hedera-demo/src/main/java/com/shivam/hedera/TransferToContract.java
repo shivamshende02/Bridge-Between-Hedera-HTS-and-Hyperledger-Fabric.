@@ -5,47 +5,74 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class TransferToContract {
     public static void main(String[] args) throws Exception {
-        // Connect to Hedera Testnet
-        Client client = Client.forTestnet();
-
-        // Load operator credentials from .env file
+        
+        // Setup client
         Dotenv dotenv = Dotenv.load();
         PrivateKey operatorKey = PrivateKey.fromString(dotenv.get("OPERATOR_KEY"));
         AccountId operatorId = AccountId.fromString(dotenv.get("OPERATOR_ID"));
+        
+        Client client = Client.forTestnet();
         client.setOperator(operatorId, operatorKey);
 
-        // Define token (fungible) and destination contract
+        // Configuration
         TokenId tokenId = TokenId.fromString("0.0.6460709");
-        AccountId contractAccountId = AccountId.fromString("0.0.7278925");
+        ContractId contractId = ContractId.fromString(dotenv.get("CONTRACT_ID"));
+        AccountId contractAccountId = AccountId.fromString(contractId.toString());
+        long amount = 100;
 
-        // Build the transfer transaction (sending 100 tokens to contract)
-        TransferTransaction tx = new TransferTransaction()
-            .addTokenTransfer(tokenId, client.getOperatorAccountId(), -100)
-            .addTokenTransfer(tokenId, contractAccountId, 100)
+        System.out.println("═══════════════════════════════════════════");
+        System.out.println("🔄 STEP 1: Transferring tokens to contract");
+        System.out.println("═══════════════════════════════════════════");
+        
+        // Step 1: Transfer tokens to contract
+        TransferTransaction transferTx = new TransferTransaction()
+            .addTokenTransfer(tokenId, operatorId, -amount)
+            .addTokenTransfer(tokenId, contractAccountId, amount)
             .freezeWith(client)
             .sign(operatorKey);
 
-        // Submit transaction and get both the hash AND final receipt/status
-        TransactionResponse response = tx.execute(client);
-        String transactionHash = bytesToHex(response.transactionHash);
-        TransactionReceipt receipt = response.getReceipt(client);
+        TransactionResponse transferResponse = transferTx.execute(client);
+        TransactionReceipt transferReceipt = transferResponse.getReceipt(client);
 
-        System.out.println("✅ Transaction submitted!");
-        System.out.println("Transaction hash: 0x" + transactionHash);
-        System.out.println("Token transfer status: " + receipt.status);
+        System.out.println("✅ Transfer Status: " + transferReceipt.status);
+        System.out.println("Transaction ID: " + transferResponse.transactionId);
+        
+        // Wait a moment for network propagation
+        System.out.println("\n⏳ Waiting 2 seconds...\n");
+        Thread.sleep(2000);
 
-        if ("SUCCESS".equalsIgnoreCase(receipt.status.toString())) {
-            System.out.println("Transfer succeeded.");
-        } else {
-            System.out.println("Transfer failed or partial: " + receipt.status);
-        }
-    }
+        System.out.println("═══════════════════════════════════════════");
+        System.out.println("🔒 STEP 2: Calling lockTokens to emit event");
+        System.out.println("═══════════════════════════════════════════");
+        
+        // Step 2: Call lockTokens to emit the event
+        ContractExecuteTransaction lockTx = new ContractExecuteTransaction()
+            .setContractId(contractId)
+            .setGas(300000)
+            .setFunction(
+                "lockTokens",
+                new ContractFunctionParameters()
+                    .addAddress(tokenId.toSolidityAddress())
+                    .addInt64(amount)
+            )
+            .freezeWith(client)
+            .sign(operatorKey);
 
-    // Helper to display transaction hash as hex
-    private static String bytesToHex(byte[] bytes) {
-        StringBuilder sb = new StringBuilder();
-        for (byte b : bytes)
-            sb.append(String.format("%02x", b));
-        return sb.toString();
+        TransactionResponse lockResponse = lockTx.execute(client);
+        TransactionReceipt lockReceipt = lockResponse.getReceipt(client);
+
+        System.out.println("✅ Lock Status: " + lockReceipt.status);
+        System.out.println("Transaction ID: " + lockResponse.transactionId);
+        
+        System.out.println("\n═══════════════════════════════════════════");
+        System.out.println("✅ COMPLETE!");
+        System.out.println("═══════════════════════════════════════════");
+        System.out.println("Token:    0.0.6460709");
+        System.out.println("Amount:   " + amount);
+        System.out.println("Contract: " + contractId);
+        System.out.println("\n⏳ Wait 5-10 seconds for Mirror Node to index...");
+        System.out.println("👀 Check your listener terminal for the event!");
+        
+        client.close();
     }
 }

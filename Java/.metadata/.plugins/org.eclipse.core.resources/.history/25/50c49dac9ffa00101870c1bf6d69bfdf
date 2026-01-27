@@ -1,0 +1,36 @@
+import com.hedera.hashgraph.sdk.*;
+
+public class AssociateContractWithToken {
+    
+    public static void main(String[] args) throws Exception {
+        
+        // Setup client
+        AccountId operatorId = AccountId.fromString("0.0.YOUR_ACCOUNT");
+        PrivateKey operatorKey = PrivateKey.fromString("YOUR_PRIVATE_KEY");
+        
+        Client client = Client.forTestnet();
+        client.setOperator(operatorId, operatorKey);
+        
+        // Your deployed contract
+        ContractId contractId = ContractId.fromString("0.0.YOUR_CONTRACT_ID");
+        
+        // Token to associate
+        TokenId tokenId = TokenId.fromString("0.0.YOUR_TOKEN_ID");
+        
+        // Associate token with contract (requires contract admin key)
+        TokenAssociateTransaction transaction = new TokenAssociateTransaction()
+                .setAccountId(AccountId.fromString(contractId.toString()))
+                .setTokenIds(Collections.singletonList(tokenId))
+                .freezeWith(client);
+        
+        // Sign with the contract's admin key (set during contract creation)
+        transaction.sign(operatorKey);
+        
+        TransactionResponse response = transaction.execute(client);
+        TransactionReceipt receipt = response.getReceipt(client);
+        
+        System.out.println("Association status: " + receipt.status);
+        
+        client.close();
+    }
+}

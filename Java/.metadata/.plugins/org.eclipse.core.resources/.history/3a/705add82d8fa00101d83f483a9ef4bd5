@@ -1,0 +1,272 @@
+package com.shivam.hedera;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import io.github.cdimascio.dotenv.Dotenv;
+import org.web3j.abi.EventEncoder;
+import org.web3j.abi.FunctionReturnDecoder;
+import org.web3j.abi.TypeReference;
+import org.web3j.abi.datatypes.Address;
+import org.web3j.abi.datatypes.Event;
+import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.generated.Int64;
+import org.web3j.abi.datatypes.generated.Uint256;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.Arrays;
+import java.util.List;
+
+public class HederaListener {
+
+    // Testnet Mirror Node base URL
+    private static final String MIRROR_NODE_URL = "https://testnet.mirrornode.hedera.com/api/v1";
+    
+    // Your contract ID in EVM address format
+    private static String contractEvmAddress;
+    
+    // Event signature for TokensLocked
+    private static final String TOKENS_LOCKED_SIGNATURE;
+    
+    static {
+        // Define the TokensLocked event structure
+        Event tokensLockedEvent = new Event("TokensLocked",
+            Arrays.asList(
+                new TypeReference<Address>(true) {},  // indexed token
+                new TypeReference<Address>(true) {},  // indexed sender
+                new TypeReference<Int64>() {},        // amount
+                new TypeReference<Uint256>() {}       // timestamp
+            )
+        );
+        
+        // Calculate event signature hash
+        TOKENS_LOCKED_SIGNATURE = EventEncoder.encode(tokensLockedEvent);
+        System.out.println("TokensLocked Event Signature: " + TOKENS_LOCKED_SIGNATURE);
+    }
+
+    public static void main(String[] args) throws Exception {
+        
+        // Load contract ID from .env
+        Dotenv dotenv = Dotenv.load();
+        String contractId = dotenv.get("CONTRACT_ID"); // Add this to your .env file
+        
+        // Convert contract ID to EVM address
+        contractEvmAddress = contractIdToEvmAddress(contractId);
+        System.out.println("Listening for events from contract: " + contractId);
+        System.out.println("EVM Address: " + contractEvmAddress);
+        System.out.println("Polling Mirror Node every 5 seconds...\n");
+        
+        // Start polling
+        pollMirrorNode();
+    }
+
+    /**
+     * Continuously polls Mirror Node for new TokensLocked events
+     */
+    private static void pollMirrorNode() throws InterruptedException {
+        
+        String lastTimestamp = null;
+        HttpClient client = HttpClient.newHttpClient();
+        
+        while (true) {
+            try {
+                // Build API request URL
+                String url = buildMirrorNodeUrl(lastTimestamp);
+                
+                HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Accept", "application/json")
+                    .GET()
+                    .build();
+                
+                // Execute request
+                HttpResponse<String> response = client.send(request, 
+                    HttpResponse.BodyHandlers.ofString());
+                
+                if (response.statusCode() == 200) {
+                    // Parse and process events
+                    lastTimestamp = processEvents(response.body(), lastTimestamp);
+                } else {
+                    // DEBUG: Print full error response
+                    System.err.println("Mirror Node error: " + response.statusCode());
+                    System.err.println("Response body: " + response.body());
+                }
+                
+            } catch (IOException | InterruptedException e) {
+                System.err.println("Error polling Mirror Node: " + e.getMessage());
+                e.printStackTrace();
+            }
+            
+            // Wait 5 seconds before next poll
+            Thread.sleep(5000);
+        }
+    }
+
+    /**
+     * Build Mirror Node API URL for contract logs
+     */
+    private static String buildMirrorNodeUrl(String fromTimestamp) {
+        StringBuilder url = new StringBuilder(MIRROR_NODE_URL);
+        url.append("/contracts/").append(contractEvmAddress).append("/results/logs");
+        url.append("?order=asc&limit=10");
+        
+        // Filter by TokensLocked event signature
+        url.append("&topic0=").append(TOKENS_LOCKED_SIGNATURE);
+        
+        // Only fetch events after last seen timestamp
+        if (fromTimestamp != null) {
+            url.append("&timestamp=gt:").append(fromTimestamp);
+        }
+        
+        // DEBUG: Print the URL being called
+        System.out.println("DEBUG - Calling URL: " + url.toString());
+        
+        return url.toString();
+    }
+
+    /**
+     * Process events from Mirror Node response
+     */
+    private static String processEvents(String jsonResponse, String lastTimestamp) {
+        
+        JsonObject json = JsonParser.parseString(jsonResponse).getAsJsonObject();
+        JsonArray logs = json.getAsJsonArray("logs");
+        
+        if (logs == null || logs.size() == 0) {
+            return lastTimestamp;
+        }
+        
+        System.out.println("🔔 Found " + logs.size() + " new TokensLocked event(s)!\n");
+        
+        String newestTimestamp = lastTimestamp;
+        
+        for (int i = 0; i < logs.size(); i++) {
+            JsonObject log = logs.get(i).getAsJsonObject();
+            
+            // Extract event details
+            String timestamp = log.get("timestamp").getAsString();
+            JsonArray topics = log.getAsJsonArray("topics");
+            String data = log.get("data").getAsString();
+            
+            // Decode event
+            TokenLockEvent event = decodeTokensLockedEvent(topics, data, timestamp);
+            
+            // Print event details
+            printEventDetails(event);
+            
+            // Update newest timestamp
+            newestTimestamp = timestamp;
+        }
+        
+        return newestTimestamp;
+    }
+
+    /**
+     * Decode TokensLocked event from raw log data
+     */
+    @SuppressWarnings("rawtypes")
+    /**
+     * Decode TokensLocked event from raw log data
+     */
+    private static TokenLockEvent decodeTokensLockedEvent(
+        JsonArray topics, String data, String timestamp) {
+        
+        TokenLockEvent event = new TokenLockEvent();
+        event.timestamp = timestamp;
+        
+        try {
+            // Decode indexed parameters from topics
+            if (topics.size() >= 3) {
+                String tokenTopic = topics.get(1).getAsString();
+                String senderTopic = topics.get(2).getAsString();
+                
+                event.token = topicToAddress(tokenTopic);
+                event.sender = topicToAddress(senderTopic);
+            }
+            
+            // Decode non-indexed parameters from data
+            // Format: 0x + [32 bytes amount] + [32 bytes timestamp]
+            if (data != null && !data.equals("0x")) {
+                String hexData = data.startsWith("0x") ? data.substring(2) : data;
+                
+                if (hexData.length() >= 128) {
+                    // Parse int64 amount (first 32 bytes, but int64 is only 8 bytes)
+                    // It's right-aligned in the 32-byte slot
+                    String amountHex = hexData.substring(48, 64); // Last 16 hex chars = 8 bytes
+                    event.amount = Long.parseUnsignedLong(amountHex, 16);
+                    
+                    // Parse uint256 timestamp (next 32 bytes)
+                    String timestampHex = hexData.substring(64, 128);
+                    // Take last 16 hex chars for reasonable timestamp
+                    event.blockTimestamp = Long.parseUnsignedLong(
+                        timestampHex.substring(48, 64), 16
+                    );
+                }
+            }
+            
+        } catch (Exception e) {
+            System.err.println("Error decoding event: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        // Always return the event object
+        return event;
+    }
+
+
+
+    /**
+     * Convert indexed topic (32 bytes) to 20-byte address
+     */
+    private static String topicToAddress(String topic) {
+        // Topics are 32 bytes (64 hex chars), address is last 20 bytes (40 hex chars)
+        if (topic.startsWith("0x")) {
+            topic = topic.substring(2);
+        }
+        if (topic.length() == 64) {
+            return "0x" + topic.substring(24); // Last 40 chars
+        }
+        return topic;
+    }
+
+    /**
+     * Convert Hedera Contract ID (0.0.x) to EVM address
+     */
+    private static String contractIdToEvmAddress(String contractId) {
+        String[] parts = contractId.split("\\.");
+        long num = Long.parseLong(parts[2]);
+        return String.format("0x%040x", num);
+    }
+
+    /**
+     * Print formatted event details
+     */
+    private static void printEventDetails(TokenLockEvent event) {
+        System.out.println("═══════════════════════════════════════════");
+        System.out.println("📦 TOKEN LOCK DETECTED");
+        System.out.println("═══════════════════════════════════════════");
+        System.out.println("Token Address:    " + event.token);
+        System.out.println("Sender:           " + event.sender);
+        System.out.println("Amount:           " + event.amount);
+        System.out.println("Block Timestamp:  " + event.blockTimestamp);
+        System.out.println("Mirror Timestamp: " + event.timestamp);
+        System.out.println("═══════════════════════════════════════════\n");
+        
+        // TODO: Next step - create payload for HLF
+    }
+
+    /**
+     * Data structure for TokensLocked event
+     */
+    static class TokenLockEvent {
+        String token;
+        String sender;
+        long amount;
+        long blockTimestamp;
+        String timestamp;
+    }
+}

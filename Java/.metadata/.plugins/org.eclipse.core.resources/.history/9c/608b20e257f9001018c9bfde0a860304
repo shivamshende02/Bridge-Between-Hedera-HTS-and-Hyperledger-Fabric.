@@ -1,0 +1,38 @@
+package com.shivam.hedera;
+
+import com.hedera.hashgraph.sdk.*;
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class TokenAssociation {
+    public static void main(String[] args) {
+        Dotenv dotenv = Dotenv.load();
+        
+        try (Client client = Client.forTestnet()) {
+            client.setOperator(
+                AccountId.fromString(dotenv.get("OPERATOR_ID")),
+                PrivateKey.fromString(dotenv.get("OPERATOR_KEY"))
+            );
+
+            ContractId contractId = ContractId.fromString("0.0.7728744");
+            TokenId tokenId = TokenId.fromString("0.0.6460709");
+
+            TransactionResponse response = new ContractExecuteTransaction()
+                .setContractId(contractId)
+                .setGas(300_000)
+                .setFunction(
+                    "associateNewToken",
+                    new ContractFunctionParameters()
+                        .addAddress(tokenId.toSolidityAddress())
+                )
+                .execute(client);
+
+            TransactionReceipt receipt = response.getReceipt(client);
+            
+            System.out.println("Association status: " + receipt.status);
+            
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
